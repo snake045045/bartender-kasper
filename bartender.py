@@ -1,3 +1,6 @@
+## From bartender-kasper
+from Tkinter import *
+
 import gaugette.ssd1306
 import gaugette.platform
 import gaugette.gpio
@@ -17,6 +20,8 @@ from dotstar import Adafruit_DotStar
 from menu import MenuItem, Menu, Back, MenuContext, MenuDelegate
 from drinks import drink_list, drink_options
 
+
+
 GPIO.setmode(GPIO.BCM)
 
 SCREEN_WIDTH = 128
@@ -32,6 +37,45 @@ OLED_RESET_PIN = 15
 OLED_DC_PIN = 16
 
 FLOW_RATE = 60.0/100.0
+
+
+
+## GUI Definitions
+win = Tk()
+win.title("Bartender HMI")
+
+'''
+## frame 
+##myFont = tkinter.font.Font(family = 'Helvetica', size = 12, weight = "bold")
+#leftFrame = Frame(win)
+#leftFrame.pack(side = LEFT)
+#rightFrame = Frame(win)
+#rightFrame.pack(side = RIGHT)
+#midFrame = Frame(win)
+#midFrame.pack(side = RIGHT)
+'''
+
+label=Label() 
+def knap1():
+    bartender.left_btn(False)  
+   
+def knap2():
+    bartender.right_btn(False)
+    
+    
+
+## Widgets
+ledButton = Button(win, text = 'Knap 1', comman = knap1)
+ledButton.grid(row=0,column=1)
+
+ledButton2 = Button(win, text = 'Knap 2', comman = knap2)
+ledButton2.grid(row=1,column=1)
+
+##Label
+menutext =("")
+
+
+
 
 class Bartender(MenuDelegate): 
     def __init__(self):
@@ -187,6 +231,8 @@ class Bartender(MenuDelegate):
         self.led.cls()
         self.led.canvas.text((0,20),menuItem.name, font=FONT, fill=1)
         self.led.display()
+        label.config(text = menuItem.name)
+        label.grid(row=0,column=2)
 
     def pour(self, pin, waitTime):
         GPIO.output(pin, GPIO.LOW)
