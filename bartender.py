@@ -42,18 +42,20 @@ FLOW_RATE = 60.0/100.0
 
 ## GUI Definitions
 win = Tk()
-win.title("Bartender HMI")
+win.title("Kasper's Bartender")
 
-'''
+
 ## frame 
 ##myFont = tkinter.font.Font(family = 'Helvetica', size = 12, weight = "bold")
-#leftFrame = Frame(win)
-#leftFrame.pack(side = LEFT)
-#rightFrame = Frame(win)
-#rightFrame.pack(side = RIGHT)
-#midFrame = Frame(win)
-#midFrame.pack(side = RIGHT)
-'''
+topFrame = Frame(win)
+topFrame.pack(side = TOP)
+bottomFrame = Frame(win)
+bottomFrame.pack(side = BOTTOM)
+topFrame.pack(side = TOP)
+bottom2Frame = Frame(win)
+bottom2Frame.pack(side = BOTTOM)
+
+drinknavn = " "
 
 label=Label() 
 def knap1():
@@ -62,19 +64,33 @@ def knap1():
 def knap2():
     bartender.right_btn(False)
     
-    
+labeltop = Label(topFrame, text = "" )
+labelprep = Label(topFrame, text="")
+
 
 ## Widgets
+
+ledButton = Button(bottomFrame, text = 'Skift', comman = knap1)
+ledButton.pack(side = LEFT)
+
+ledButton2 = Button(bottomFrame, text = 'VAELG', comman = knap2)
+ledButton2.pack(side = RIGHT)
+
+#a = Label(topFrame, text="Navn paa drink")
+#a.pack(side=TOP)
+
+
+b = Label(bottom2Frame, text="progressbar")
+b.pack(side=BOTTOM)
+'''    
 ledButton = Button(win, text = 'Knap 1', comman = knap1)
 ledButton.grid(row=0,column=1)
 
 ledButton2 = Button(win, text = 'Knap 2', comman = knap2)
 ledButton2.grid(row=1,column=1)
-
+'''
 ##Label
 menutext =("")
-
-
 
 
 class Bartender(MenuDelegate): 
@@ -129,7 +145,6 @@ class Bartender(MenuDelegate):
         drink_opts = []
         for d in drink_list:
             drink_opts.append(MenuItem('drink', d["name"], {"ingredients": d["ingredients"]}))
-
         configuration_menu = Menu("Configure")
 
         # add pump configuration options
@@ -228,12 +243,25 @@ class Bartender(MenuDelegate):
 
     def displayMenuItem(self, menuItem):
         print (menuItem.name)
+        #drinknavn = ""
+        drinknavn = menuItem.name
         self.led.cls()
         self.led.canvas.text((0,20),menuItem.name, font=FONT, fill=1)
         self.led.display()
-        label.config(text = menuItem.name)
-        label.grid(row=0,column=2)
-
+        labeltop.config (text = menuItem.name)
+        labeltop.pack()
+        for er in range(len(drink_list)):
+           sammenlign = drink_list[er]["name"]
+           if menuItem.name == sammenlign:
+              labelprep.config(text =drink_list[er]["prep"])
+              labelprep.pack(side=BOTTOM)
+              break
+           else: 
+               labelprep.config (text ="tom")
+               labelprep.pack(side=BOTTOM)
+            
+             
+                
     def pour(self, pin, waitTime):
         GPIO.output(pin, GPIO.LOW)
         time.sleep(waitTime)
