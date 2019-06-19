@@ -1,5 +1,6 @@
 ## From bartender-kasper
 from Tkinter import *
+import ttk
 
 import gaugette.ssd1306
 import gaugette.platform
@@ -81,7 +82,7 @@ ledButton2.pack(side = RIGHT)
 #a.pack(side=TOP)
 
 
-b = Label(bottom2Frame, text="progressbar")
+b = Label(bottom2Frame, text="")
 b.pack(side=BOTTOM)
 '''    
 ledButton = Button(win, text = 'Knap 1', comman = knap1)
@@ -93,6 +94,12 @@ ledButton2.grid(row=1,column=1)
 ##Label
 menutext =("")
 
+progressbar = ttk.Progressbar(bottom2Frame, orient="horizontal",length=500, mode="determinate")
+progressbar.pack(side=BOTTOM)
+
+progressbar["value"]=0
+progressbar.update()
+progressbar["maximum"]=1
 
 class Bartender(MenuDelegate): 
     def __init__(self):
@@ -277,18 +284,28 @@ class Bartender(MenuDelegate):
         localStartTime = time.time()
         height = 10
         width = self.screen_width-2*x
-        print(totalTime)
         while time.time() - localStartTime < waitTime:
             progress = (time.time() - startTime)/totalTime
+            if progress < 0.98:
+                progressbar["value"]=progress
+                progressbar["maximum"]=0.97
+                progressbar.update()
+            else:
+                progressbar["value"]=0
+                progressbar["maximum"]=0.97
+                progressbar.update()
             p_loc = int(progress*width)
             self.led.canvas.rectangle((x,y,x+width,y+height), outline=255, fill=0)
             self.led.canvas.rectangle((x+1,y+1,x+p_loc,y+height-1), outline=255, fill=1)
+            b = Label(text="VENT!")
+            b.pack(side=BOTTOM)
+            #b.pack()
             try:
                 self.led.display()
             except IOError:
                 print("Failed to talk to screen")
             time.sleep(0.2)
-
+         
     def makeDrink(self, drink, ingredients):
         # cancel any button presses while the drink is being made
         self.running = True
