@@ -21,7 +21,6 @@ from menu import MenuItem, Menu, Back, MenuContext, MenuDelegate
 from drinks import drink_list, drink_options
 
 
-
 GPIO.setmode(GPIO.BCM)
 
 SCREEN_WIDTH = 128
@@ -43,7 +42,7 @@ FLOW_RATE = 60.0/100.0
 ## GUI Definitions
 win = Tk()
 win.title("Kasper's Bartender")
-
+win.geometry("800x430+0+0")
 
 ## frame 
 ##myFont = tkinter.font.Font(family = 'Helvetica', size = 12, weight = "bold")
@@ -52,6 +51,8 @@ topFrame.pack(side = TOP)
 bottomFrame = Frame(win)
 bottomFrame.pack(side = BOTTOM)
 topFrame.pack(side = TOP)
+bottomtop = Frame(win)
+bottomtop.pack(side = TOP)
 bottom2Frame = Frame(win)
 bottom2Frame.pack(side = BOTTOM)
 
@@ -64,16 +65,16 @@ def knap1():
 def knap2():
     bartender.right_btn(False)
     
-labeltop = Label(topFrame, text = "" )
-labelprep = Label(topFrame, text="")
+labeltop = Label(topFrame, text = "", font=("Helvetica", 40) )
+labelprep = Label(topFrame, text="", font=("Helvetica", 30))
 
 
 ## Widgets
 
-ledButton = Button(bottomFrame, text = 'Skift', comman = knap1)
+ledButton = Button(bottomFrame,height=1,activebackground = "#33E6FF", bg = "#33E6FF", width=10, text = 'SKIFT',font=("Helvetica", 50) , comman = knap1)
 ledButton.pack(side = LEFT)
 
-ledButton2 = Button(bottomFrame, text = 'VAELG', comman = knap2)
+ledButton2 = Button(bottomFrame,bg = "#33E6FF",activebackground = "#33E6FF", height=1, width=10, text = 'JA TAK!',font=("Helvetica", 50), comman = knap2)
 ledButton2.pack(side = RIGHT)
 
 #a = Label(topFrame, text="Navn paa drink")
@@ -276,7 +277,7 @@ class Bartender(MenuDelegate):
         localStartTime = time.time()
         height = 10
         width = self.screen_width-2*x
-
+        print(totalTime)
         while time.time() - localStartTime < waitTime:
             progress = (time.time() - startTime)/totalTime
             p_loc = int(progress*width)
