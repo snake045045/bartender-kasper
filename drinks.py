@@ -1,4 +1,4 @@
-#drinks.py
+# -*- encoding: utf-8 -*-
 drink_list = [{
         'name': 'Vesper',
         'ingredients': {
@@ -40,7 +40,10 @@ drink_list = [{
         'ingredients': {
             'whiskey': 45.0
         },
-        'prep': 'Place sugar cube in old-fashioned glass and saturate with bitters,add a dash of plain water. Muddle until dissolve. Fill the glass with ice cubes and add whisky.',
+        'prep': 'R fra prep der tilhøre old Fashioned40k',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
         'specials': ['2 dashes Angostura Bitters',
 '1 sugar cube']
     },

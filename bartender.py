@@ -1,3 +1,4 @@
+# -*- encoding: utf-8 -*-
 ## From bartender-kasper
 from Tkinter import *
 import ttk
@@ -10,6 +11,7 @@ import sys
 import RPi.GPIO as GPIO
 import json
 import traceback
+import subprocess
 
 from lib_oled96 import ssd1306
 from smbus import SMBus
@@ -40,67 +42,62 @@ FLOW_RATE = 60.0/100.0
 
 
 
-## GUI Definitions
-win = Tk()
-win.title("Kasper's Bartender")
-win.geometry("800x430+0+0")
-
-## frame 
-##myFont = tkinter.font.Font(family = 'Helvetica', size = 12, weight = "bold")
-topFrame = Frame(win)
-topFrame.pack(side = TOP)
-bottomFrame = Frame(win)
-bottomFrame.pack(side = BOTTOM)
-topFrame.pack(side = TOP)
-bottomtop = Frame(win)
-bottomtop.pack(side = TOP)
-bottom2Frame = Frame(win)
-bottom2Frame.pack(side = BOTTOM)
-
-drinknavn = " "
-
-label=Label() 
+##subprocess.call("xinput --set-prop 'QDtech MPI5001' 'Coordinate Transformation Matrix'  0 -1 1 1 0 0 0 0 1", shell=True)
 def knap1():
-    bartender.left_btn(False)  
+    bartender.left_btn(False)
+    labelPhoto.configure(image=imgPinaColada)  
    
 def knap2():
     bartender.right_btn(False)
     
-labeltop = Label(topFrame, text = "", font=("Helvetica", 40) )
-labelprep = Label(topFrame, text="", font=("Helvetica", 30))
+## GUI Definitions
+win = Tk()
+win.title("Kasper's Bartender")
+win.geometry("480x750+0+0")
 
+## Photo
+imgRomAndCoke = PhotoImage(file="RomAndCoke.png")
+imgPinaColada = PhotoImage(file="PinaColada.png")
+labelPhoto = Label(win, image=imgRomAndCoke)
 
-## Widgets
+dansk = u"åæø"
+utf8_encoded = dansk.encode('utf-8')
 
-ledButton = Button(bottomFrame,height=1,activebackground = "#33E6FF", bg = "#33E6FF", width=10, text = 'SKIFT',font=("Helvetica", 50) , comman = knap1)
-ledButton.pack(side = LEFT)
+## Labels
+drinkName=""
+prepText1 =""
+labelDrinkName=Label(win,text = drinkName, font=("Helvetica", 40))
 
-ledButton2 = Button(bottomFrame,bg = "#33E6FF",activebackground = "#33E6FF", height=1, width=10, text = 'JA TAK!',font=("Helvetica", 50), comman = knap2)
-ledButton2.pack(side = RIGHT)
+labelPrep1=Label(win,text = prepText1,font=("Helvetica", 20))
+labelPrep2=Label(win,text = "Dette er anden linje",font=("Helvetica", 20))
+labelPrep3=Label(win,text = "Dette er tredje linje",font=("Helvetica", 20))
+labelPrep4=Label(win,text = "Dette er fjerde linje",font=("Helvetica", 20))
+#labelPrep5=Label(win,text = "Dette er femte linje",font=("Helvetica", 20))
 
-#a = Label(topFrame, text="Navn paa drink")
-#a.pack(side=TOP)
+##Buttons
+BTNChange=Button(win, text = 'SKIFT', font=("Helvetica", 22),activebackground = "#33E6FF", bg = "#33E6FF", height=2, width=11, comman = knap1)
+BTNSelect=Button(win, text = 'JA TAK!',font=("Helvetica", 22),activebackground = "#33E6FF", bg = "#33E6FF", height=2, width=11, comman = knap2)
 
-
-b = Label(bottom2Frame, text="")
-b.pack(side=BOTTOM)
-'''    
-ledButton = Button(win, text = 'Knap 1', comman = knap1)
-ledButton.grid(row=0,column=1)
-
-ledButton2 = Button(win, text = 'Knap 2', comman = knap2)
-ledButton2.grid(row=1,column=1)
-'''
-##Label
-menutext =("")
-
-progressbar = ttk.Progressbar(bottom2Frame, orient="horizontal",length=500, mode="determinate")
-progressbar.pack(side=BOTTOM)
-
+## progressbar
+progressbar = ttk.Progressbar(win, orient="horizontal", length=400, mode="determinate")
 progressbar["value"]=0
 progressbar.update()
 progressbar["maximum"]=1
 
+## Layout
+labelDrinkName.grid(row=0,columnspan=2)
+labelPhoto.grid(row=1, columnspan=2)
+labelPrep1.grid(row=2,column=0, columnspan=2, sticky=W)
+labelPrep2.grid(row=3,column=0, columnspan=2, sticky=W)
+labelPrep3.grid(row=4,column=0, columnspan=2, sticky=W)
+labelPrep4.grid(row=5,column=0, columnspan=2, sticky=W)
+#labelPrep5.grid(row=6,column=0, columnspan=2, sticky=W)
+progressbar.grid(row=7, columnspan=2)
+BTNChange.grid(row=8,column=0)
+BTNSelect.grid(row=8,column=1)
+
+
+    
 class Bartender(MenuDelegate): 
     def __init__(self):
         self.running = False
@@ -251,22 +248,25 @@ class Bartender(MenuDelegate):
 
     def displayMenuItem(self, menuItem):
         print (menuItem.name)
-        #drinknavn = ""
-        drinknavn = menuItem.name
+        drinkName = menuItem.name
+        labelDrinkName.configure(text = drinkName)
         self.led.cls()
         self.led.canvas.text((0,20),menuItem.name, font=FONT, fill=1)
         self.led.display()
-        labeltop.config (text = menuItem.name)
-        labeltop.pack()
         for er in range(len(drink_list)):
            sammenlign = drink_list[er]["name"]
            if menuItem.name == sammenlign:
-              labelprep.config(text =drink_list[er]["prep"])
-              labelprep.pack(side=BOTTOM)
+              labelPrep1.configure(text=drink_list[er]["prep"])
+              labelPrep2.configure(text=drink_list[er]["prep1"])
+              labelPrep3.configure(text=drink_list[er]["prep2"])
+              labelPrep4.configure(text=drink_list[er]["prep3"])
               break
            else: 
-               labelprep.config (text ="tom")
-               labelprep.pack(side=BOTTOM)
+                labelPrep1.configure(text="")
+                labelPrep2.configure(text="")
+                labelPrep3.configure(text="")
+                labelPrep4.configure(text="")
+               
             
              
                 
@@ -297,9 +297,6 @@ class Bartender(MenuDelegate):
             p_loc = int(progress*width)
             self.led.canvas.rectangle((x,y,x+width,y+height), outline=255, fill=0)
             self.led.canvas.rectangle((x+1,y+1,x+p_loc,y+height-1), outline=255, fill=1)
-            b = Label(text="VENT!")
-            b.pack(side=BOTTOM)
-            #b.pack()
             try:
                 self.led.display()
             except IOError:
