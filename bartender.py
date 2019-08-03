@@ -42,7 +42,7 @@ FLOW_RATE = 60.0/100.0
 
 
 
-##subprocess.call("xinput --set-prop 'QDtech MPI5001' 'Coordinate Transformation Matrix'  0 -1 1 1 0 0 0 0 1", shell=True)
+subprocess.call("xinput --set-prop 'QDtech MPI5001' 'Coordinate Transformation Matrix'  0 -1 1 1 0 0 0 0 1", shell=True)
 def knap1():
     bartender.left_btn(False)
     labelPhoto.configure(image=imgPinaColada)  
@@ -66,7 +66,7 @@ utf8_encoded = dansk.encode('utf-8')
 ## Labels
 drinkName=""
 prepText1 =""
-labelDrinkName=Label(win,text = drinkName, font=("Helvetica", 40))
+labelDrinkName=Label(win,text = drinkName, font=("Helvetica", 35))
 
 labelPrep1=Label(win,text = prepText1,font=("Helvetica", 20))
 labelPrep2=Label(win,text = "Dette er anden linje",font=("Helvetica", 20))

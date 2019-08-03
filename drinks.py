@@ -6,16 +6,22 @@ drink_list = [{
             'vodka': 15.0,
             'vermouth': 7.5
         },
-        'prep': 'Shake and strain into a chilled cocktail glass.'
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     },
     {
-        'name': 'Bacardi',
+        'name': 'Bacardi Cocktail',
         'ingredients': {
             'whiteRum': 45.0,
             'lij': 20,
             'grenadine': 10
         },
-        'prep': 'ba Shake with ice cubes. Strain into chilled cocktail glass.'
+        'prep': 'Kasper mener: Et lidt kedeligt,',
+        'prep1':  'men sikkert valg. Bortset fra lidt',
+        'prep2': 'grenadine er der ikke meget farve ved',
+        'prep3': 'den her. 5 ud af 10 stjerner fra mig',
     },
     {
         'name': 'Negroni',
@@ -24,7 +30,10 @@ drink_list = [{
             'campari': 30,
             'vermouth': 30
         },
-        'prep': 'Build into old-fashioned glass filled with ice. Stir gently.'
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     },
     {
         'name': 'Rose',
@@ -32,7 +41,10 @@ drink_list = [{
             'cherryBrandy': 20,
             'vermouth': 40
         },
-        'prep': 'Stir all ingredients with ice and strain into a cocktail glass.',
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
         'specials': ['3 dashes Strawberry syrup']
     },
     {
@@ -45,7 +57,7 @@ drink_list = [{
         'prep2': 'ÆØÅ Dette er prep2',
         'prep3': 'ÆØÅ Dette er prep3',
         'specials': ['2 dashes Angostura Bitters',
-'1 sugar cube']
+        '1 sugar cube']
     },
     {
         'name': 'Tuxedo',
@@ -53,10 +65,13 @@ drink_list = [{
             'gin': 30,
             'vermouth': 30
         },
-        'prep': 'Stir all ingredients with ice and strain into cocktail glass.',
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
         'specials': ['1/2 bar spoon Maraschino',
-'1/4 bar spoon Absinthe',
-'3 dashes Orange Bitters']
+        '1/4 bar spoon Absinthe',
+        '3 dashes Orange Bitters']
     },
     {
         'name': 'Mojito',
@@ -64,9 +79,12 @@ drink_list = [{
             'whiteRum': 40,
             'lij': 30
         },
-        'prep': 'Muddle mint springs with sugar and lime juice. Add splash of soda water and fill glass with cracked ice. Pour rum and top with soda water. Serve with straw.',
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
         'specials': ['2 teaspoons white sugar',
-'Soda water']
+        'Soda water']
     },
     {
         'name': "Horse's Neck",
@@ -74,7 +92,10 @@ drink_list = [{
             'brandy': 40,
             'gingerAle': 120
         },
-        'prep': 'Build into highball glass with ice cubes. Stir gently. If required, add dashes of Angostura bitters.',
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
         'specials': ['Dash of Angostura bitters (optional)']
     },
     {
@@ -86,7 +107,10 @@ drink_list = [{
             'lej': 20,
             'grenadine': 10
         },
-        'prep': 'Pour all ingredients, except the bitters, into shaker filled with ice. Shake. Pour into large glass, filled with ice. Add Angostura bitters, on top.',
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
         'specials': ['3 to 4 dashes Angostura bitters']
     },
     {
@@ -96,7 +120,10 @@ drink_list = [{
             'cj': 120,
             'gj': 30
         },
-        'prep': 'Build all ingredients in a rock glass filled with ice.'
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     },
     {
         'name': 'Pisco Sour',
@@ -105,7 +132,10 @@ drink_list = [{
             'lej': 30,
             'grenadine': 20
         },
-        'prep': 'Shake and strain into a chilled champagne flute. Dash some Angostura bitters on top.',
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
         'specials': ['1 raw egg white (small egg)']
     },
     {
@@ -119,7 +149,10 @@ drink_list = [{
             'lej': 25.0,
             'grenadine': 30.0
         },
-        'prep': 'Add all ingredients into highball glass filled with ice. Stir gently. Serve with straw.',
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
         'specials': ['1 dash of Cola']
     },
     {
@@ -129,7 +162,10 @@ drink_list = [{
             'grenadine': 15.0,
             'lej': 15.0
         },
-        'prep': 'Shake with ice cubes. Strain into cocktail glass.'
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     },
     {
         'name': 'Angel Face',
@@ -138,7 +174,10 @@ drink_list = [{
             'apricotBrandy': 30,
             'appleBrandy': 30
         },
-        'prep': 'Shake with ice cubes. Strain into a cocktail glass.'
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     },
     {
         'name': 'Mimosa',
@@ -146,7 +185,10 @@ drink_list = [{
             'champagne': 75.0,
             'oj': 75.0
         },
-        'prep': 'Pour orange juice into flute and gently pour Champagne. Stir gently. Note: a Buck\'s Fizz and a Mimosa are the same drink.'
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     },
     {
         'name': 'Whiskey Sour',
@@ -155,7 +197,10 @@ drink_list = [{
             'lej': 30.0,
             'grenadine': 15.0
         },
-        'prep': 'Dash egg white (Optional: if used shake little harder to foam up the egg white). Pour all ingredients into cocktail shaker filled with ice. Shake. Strain into cocktail glass. If served \'On the rocks\',strain ingredients into old-fashioned glass filled with ice.'
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     },
     {
         'name': 'Screwdriver',
@@ -163,7 +208,10 @@ drink_list = [{
             'vodka': 50,
             'oj': 100
         },
-        'prep': 'Build into a highball glass filled with ice. Stir gently.'
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     },
     {
         'name': 'Cuba Libre',
@@ -172,7 +220,10 @@ drink_list = [{
             'cola': 120,
             'lij': 10
         },
-        'prep': 'Build all ingredients in a highball glass filled with ice.'
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     },
     {
         'name': 'Manhattan',
@@ -180,7 +231,10 @@ drink_list = [{
             'whiskey': 50,
             'vermouth': 20
         },
-        'prep': 'Stir in mixing glass with ice cubes. Strain into chilled cocktail glass.',
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
         'specials': ['1 dash Angostura Bitters']
     },
     {
@@ -190,7 +244,10 @@ drink_list = [{
             'port': 45.0,
             'eggYolk': 10
         },
-        'prep': 'Shake with ice cubes. Strain into cocktail glass. Sprinkle with fresh ground nutmeg.'
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     },
     {
         'name': 'Gin Fizz',
@@ -200,7 +257,10 @@ drink_list = [{
             'grenadine': 10,
             'soda': 80
         },
-        'prep': 'Shake all ingredients with ice cubes, except soda water. Pour into tumbler. Top with soda water.'
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     },
     {
         'name': 'Espresso Martini',
@@ -208,7 +268,10 @@ drink_list = [{
             'vodka': 50,
             'coffeeLiqueur': 10
         },
-        'prep': 'Shake and strain into a chilled cocktail glass.',
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
         'specials': ['Sugar syrup (according to individual preference of sweetness)',
 '1 short strong Espresso']
     },
@@ -219,7 +282,10 @@ drink_list = [{
             'tripSec': 20,
             'lij': 15.0
         },
-        'prep': 'Shake with ice cubes. Strain into cocktail glass rimmed with salt (note:Fruit Margarita - blend selected fruit with the above recipe).'
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     },
     {
         'name': 'French 75',
@@ -228,7 +294,10 @@ drink_list = [{
             'lej': 15.0,
             'champagne': 60
         },
-        'prep': 'Shake with ice cubes, except for champagne. Strain into a champagne flute. Top up with champagne. Stir gently.',
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
         'specials': ['2 dashes Sugar syrup']
     },
     {
@@ -239,7 +308,10 @@ drink_list = [{
             'tripSec': 15.0,
             'lij': 15.0
         },
-        'prep': 'Shake and strain into a chilled cocktail glass.'
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     },
     {
         'name': 'Pina Colada',
@@ -248,7 +320,10 @@ drink_list = [{
             'pj': 90,
             'coconutMilk': 30
         },
-        'prep': 'Blend all the ingredients with ice in a electric blender, pour into a large goblet or Hurricane glass and serve with straws.'
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     },
     {
         'name': 'Aviation',
@@ -257,7 +332,10 @@ drink_list = [{
             'cherryLiqueur': 15.0,
             'lej': 15.0
         },
-        'prep': 'Shake and strain into a chilled cocktail glass.'
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     },
     {
         'name': 'Bellini',
@@ -265,7 +343,10 @@ drink_list = [{
             'prosecco': 100,
             'peachPuree': 50
         },
-        'prep': 'Pour peach puree into chilled glass and add sparkling wine. Stir gently. Variations: Puccini (fresh mandarin juice), Rossini (fresh strawberry puree), Tintoretto (fresh pomegranate juice)'
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     },
     {
         'name': 'Grasshopper',
@@ -273,7 +354,10 @@ drink_list = [{
             'cremeCacao': 30,
             'cream': 30
         },
-        'prep': 'Shake with ice cubes. Strain into chilled cocktail glass.'
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     },
     {
         'name': 'Tequila Sunrise',
@@ -282,7 +366,10 @@ drink_list = [{
             'oj': 90,
             'grenadine': 15.0
         },
-        'prep': 'Build tequila and orange juice into highball with ice cubes. Add a splash of grenadine to create sunrise effect. Do not stir.'
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     },
     {
         'name': 'Daiquiri',
@@ -291,14 +378,20 @@ drink_list = [{
             'lij': 25.0,
             'grenadine': 15.0
         },
-        'prep': 'Shake and strain into a cocktail glass.'
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     },
     {
         'name': 'Rusty Nail',
         'ingredients': {
             'whiskey': 25.0
         },
-        'prep': 'Build into old-fashioned glass filled with ice. Stir gently.'
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     },
     {
         'name': 'B52',
@@ -307,7 +400,10 @@ drink_list = [{
             'baileys': 20,
             'tripSec': 20
         },
-        'prep': 'Layer ingredients one at a time starting with Kahlua, followed by Baileys Irish Cream and top with Grand Marnier. Flame the Grand Marnier, serve while the flame is still on, accompanied with a straw on side plate.'
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     },
     {
         'name': 'Stinger',
@@ -315,7 +411,10 @@ drink_list = [{
             'brandy': 50,
             'cremeCacao': 20
         },
-        'prep': 'Stir in mixing glass with ice cubes. Strain into a cocktail glass.'
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     },
     {
         'name': 'Golden Dream',
@@ -325,7 +424,10 @@ drink_list = [{
             'oj': 20,
             'cream': 10
         },
-        'prep': 'Shake with ice cubes. Strain into chilled cocktail glass.'
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     },
     {
         'name': 'God Mother',
@@ -333,7 +435,10 @@ drink_list = [{
             'vodka': 35.0,
             'amaretto': 35.0
         },
-        'prep': 'Build into old fashioned glass filled with ice cubes. Stir gently.'
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     },
     {
         'name': 'Spritz Veneziano',
@@ -341,7 +446,10 @@ drink_list = [{
             'prosecco': 60,
             'aperol': 40
         },
-        'prep': 'Build into an old-fashioned glass filled with ice. Top with a splash of soda water.',
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
         'specials': ['Splash of Soda water']
     },
     {
@@ -352,7 +460,10 @@ drink_list = [{
             'grenadine': 10,
             'blackberryLiqueur': 15.0
         },
-        'prep': 'Build over crushed ice, in a rock glass. Stir, then pour the blackberry liqueur over the top of the drink in a circular fashion.'
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     },
     {
         'name': 'Alexander',
@@ -361,7 +472,10 @@ drink_list = [{
             'cremeCacao': 30,
             'cream': 30
         },
-        'prep': 'Shake and strain into a chilled cocktail glass. Sprinkle with fresh ground nutmeg.'
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     },
     {
         'name': 'Lemon Drop Martini',
@@ -370,7 +484,10 @@ drink_list = [{
             'tripSec': 20,
             'lej': 15.0
         },
-        'prep': 'Shake and strain into a chilled cocktail glass rimmed with sugar.'
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     },
     {
         'name': 'French Martini',
@@ -379,7 +496,10 @@ drink_list = [{
             'raspberryLiqueur': 15.0,
             'pj': 15.0
         },
-        'prep': 'Stir in mixing glass with ice cubes. Strain into chilled cocktail glass. Squeeze oil from lemon peel onto the drink.'
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     },
     {
         'name': 'Black Russian',
@@ -387,7 +507,10 @@ drink_list = [{
             'vodka': 50,
             'coffeeLiqueur': 20
         },
-        'prep': 'Build into old fashioned glass filled with ice cubes. Stir gently. Note: for White Russian, float fresh cream on the top and stir gently.'
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     },
     {
         'name': 'Bloody Mary',
@@ -396,7 +519,10 @@ drink_list = [{
             'tj': 90,
             'lej': 15.0
         },
-        'prep': 'Stir gently, pour all ingredients into highball glass.',
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
         'specials': ['2 to 3 dashes of Worcestershire Sauce','Tabasco','Celery salt','Pepper']
     },
     {
@@ -408,7 +534,10 @@ drink_list = [{
             'grenadine': 15.0,
             'lij': 10
         },
-        'prep': 'Shake and strain into highball glass. Serve with straw.'
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     }, {
 
         "name": "Madras",
@@ -417,7 +546,11 @@ drink_list = [{
             "vodka": 45,
             "cj": 90,
             "oj": 30
-        }
+        },
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     }, {
 
         "name": "Lemon Drop",
@@ -426,7 +559,11 @@ drink_list = [{
             "vodka": 40,
             "lej": 40,
             "grenadine": 15
-        }
+        },
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     }, {
 
         "name": "Cape Cod",
@@ -434,7 +571,11 @@ drink_list = [{
 
             "vodka": 35,
             "cj": 135
-        }
+        },
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     }, {
 
         "name": "Bourbon Squash",
@@ -444,8 +585,23 @@ drink_list = [{
             "oj": 50,
             "lej": 30,
             "grenadine": 20
-        }
-    }]
+        },
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
+    } , {
+        'name': 'Saftevand',
+        'ingredients': {
+           'tripSec': 50
+        },
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
+    } ]
+    
+    #, "pump_7": {"value": "tripSec", "name": "Pump 7", "pin": 10}, "pump_8": {"value": "oj", "name": "Pump 8", "pin": 9}
 
 drink_options = [
     {
