@@ -38,14 +38,14 @@ RIGHT_PIN_BOUNCE = 600
 OLED_RESET_PIN = 15
 OLED_DC_PIN = 16
 
-FLOW_RATE = 60.0/100.0
+FLOW_RATE = 60.0/400.0
 
 
 
 subprocess.call("xinput --set-prop 'QDtech MPI5001' 'Coordinate Transformation Matrix'  0 -1 1 1 0 0 0 0 1", shell=True)
 def knap1():
     bartender.left_btn(False)
-    labelPhoto.configure(image=imgPinaColada)  
+    #labelPhoto.configure(image=imgPinaColada)  
    
 def knap2():
     bartender.right_btn(False)
@@ -58,7 +58,26 @@ win.geometry("480x750+0+0")
 ## Photo
 imgRomAndCoke = PhotoImage(file="RomAndCoke.png")
 imgPinaColada = PhotoImage(file="PinaColada.png")
-labelPhoto = Label(win, image=imgRomAndCoke)
+imgMojito = PhotoImage(file="mojito.png")
+imgTequilaSunrise = PhotoImage(file="TequilaSunrise400.png") 
+imgScrewdriver = PhotoImage(file="Screwdriver400.png") 
+imgTootyFruity = PhotoImage(file="TootyFruity400.png") 
+imgTeddyBear = PhotoImage(file="TeddyBear400.png") 
+imgMonkeyGland = PhotoImage(file="MonkeyGland400.png") 
+imgMargarita = PhotoImage(file="Margarita400.png") 
+imgLongIsland = PhotoImage(file="LongIsland400.png") 
+imgLemonDropMartini = PhotoImage(file="LemonDropMartini400.png") 
+imgLemonDrop = PhotoImage(file="LemonDrop400.png") 
+imgKamikaze = PhotoImage(file="Kamikaze400.png") 
+imgJohnCollins = PhotoImage(file="JohnCollins400.png") 
+imgHorneyBull = PhotoImage(file="HorneyBull400.png") 
+imgGinFizz = PhotoImage(file="GinFizz400.png") 
+imgDaiquiriGimlet = PhotoImage(file="DaiquiriGimlet400.png") 
+imgCubaLibre = PhotoImage(file="CubaLibre400.png") 
+imgCloverClub = PhotoImage(file="CloverClub400.png") 
+imgBacardiCocktail = PhotoImage(file="BacardiCocktail400.png") 
+
+labelPhoto = Label(win)
 
 dansk = u"åæø"
 utf8_encoded = dansk.encode('utf-8')
@@ -72,7 +91,8 @@ labelPrep1=Label(win,text = prepText1,font=("Helvetica", 20))
 labelPrep2=Label(win,text = "Dette er anden linje",font=("Helvetica", 20))
 labelPrep3=Label(win,text = "Dette er tredje linje",font=("Helvetica", 20))
 labelPrep4=Label(win,text = "Dette er fjerde linje",font=("Helvetica", 20))
-#labelPrep5=Label(win,text = "Dette er femte linje",font=("Helvetica", 20))
+labelPrep5=Label(win,text = "",font=("Helvetica", 20))
+labelPrep6=Label(win,text = "",font=("Helvetica", 20))
 
 ##Buttons
 BTNChange=Button(win, text = 'SKIFT', font=("Helvetica", 22),activebackground = "#33E6FF", bg = "#33E6FF", height=2, width=11, comman = knap1)
@@ -91,10 +111,11 @@ labelPrep1.grid(row=2,column=0, columnspan=2, sticky=W)
 labelPrep2.grid(row=3,column=0, columnspan=2, sticky=W)
 labelPrep3.grid(row=4,column=0, columnspan=2, sticky=W)
 labelPrep4.grid(row=5,column=0, columnspan=2, sticky=W)
-#labelPrep5.grid(row=6,column=0, columnspan=2, sticky=W)
+labelPrep5.grid(row=6,column=0, columnspan=2, sticky=W)
 progressbar.grid(row=7, columnspan=2)
-BTNChange.grid(row=8,column=0)
-BTNSelect.grid(row=8,column=1)
+labelPrep6.grid(row=8,column=0, columnspan=2, sticky=W)
+BTNChange.grid(row=9,column=0)
+BTNSelect.grid(row=9,column=1)
 
 
     
@@ -253,6 +274,47 @@ class Bartender(MenuDelegate):
         self.led.cls()
         self.led.canvas.text((0,20),menuItem.name, font=FONT, fill=1)
         self.led.display()
+        if drinkName == 'Mojito':
+           labelPhoto.configure (image=imgMojito)
+        if drinkName == 'Pina Colada':
+           labelPhoto.configure (image=imgPinaColada)
+        if drinkName == 'Tequila Sunrise':
+           labelPhoto.configure (image=imgTequilaSunrise) 
+        if drinkName == 'Screwdriver':
+           labelPhoto.configure (image=imgScrewdriver)
+        if drinkName == 'Tooty Fruity':
+           labelPhoto.configure (image=imgTootyFruity)
+        if drinkName == 'Teddy Bear':
+           labelPhoto.configure (image=imgTeddyBear)
+        if drinkName == 'Monkey Gland':
+           labelPhoto.configure (image=imgMonkeyGland)
+        if drinkName == 'Margarita':
+           labelPhoto.configure (image=imgMargarita)
+        if drinkName == 'Long Island Iced Tea':
+           labelPhoto.configure (image=imgLongIsland)
+        if drinkName == 'Lemon Drop Martini':
+           labelPhoto.configure (image=imgLemonDropMartini)
+        if drinkName == 'Lemon Drop':
+           labelPhoto.configure (image=imgLemonDrop)
+        if drinkName == 'Kamikaze':
+           labelPhoto.configure (image=imgKamikaze)
+        if drinkName == 'John Collins':
+           labelPhoto.configure (image=imgJohnCollins)
+        if drinkName == 'Horney Bull':
+           labelPhoto.configure (image=imgHorneyBull)
+        if drinkName == 'Gin Fizz':
+           labelPhoto.configure (image=imgGinFizz)
+        if drinkName == 'Daiquiri':
+           labelPhoto.configure (image=imgDaiquiriGimlet)
+        if drinkName == 'Gimlet':
+           labelPhoto.configure (image=imgDaiquiriGimlet)
+        if drinkName == 'Cuba Libre':
+           labelPhoto.configure (image=imgCubaLibre)
+        if drinkName == 'Clover Club':
+           labelPhoto.configure (image=imgCloverClub)
+        if drinkName == 'Bacardi Cocktail':
+           labelPhoto.configure (image=imgBacardiCocktail)
+
         for er in range(len(drink_list)):
            sammenlign = drink_list[er]["name"]
            if menuItem.name == sammenlign:

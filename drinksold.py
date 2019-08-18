@@ -15,7 +15,7 @@ drink_list = [{
         'name': 'Bacardi Cocktail',
         'ingredients': {
             'whiteRum': 45.0,
-            'lej': 20,
+            'lij': 20,
             'grenadine': 10
         },
         'prep': 'Kasper mener: Et lidt kedeligt,',
@@ -76,15 +76,13 @@ drink_list = [{
     {
         'name': 'Mojito',
         'ingredients': {
-            'whiteRum': 45,
-            'soda': 45,
-            'sugar': 45,
-            'lej': 25
+            'whiteRum': 40,
+            'lij': 30
         },
-        'prep': 'TILFØJ: En ske knust mynte ',
-        'prep1':  '',
-        'prep2': '',
-        'prep3': '',
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
         'specials': ['2 teaspoons white sugar',
         'Soda water']
     },
@@ -148,13 +146,13 @@ drink_list = [{
             'whiteRum': 15.0,
             'tripSec': 15.0,
             'gin': 15.0,
-            'lej': 15.0,
-            'cola': 30.0
+            'lej': 25.0,
+            'grenadine': 30.0
         },
-        'prep': 'Kasper mener: Du er godt nok modig',
-        'prep1':  'men det kunne jeg have sagt mig',
-        'prep2': 'selv. Du kender jo trods alt mig.',
-        'prep3': '8 ud af 10 stjerner herfra',
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
         'specials': ['1 dash of Cola']
     },
     {
@@ -207,20 +205,20 @@ drink_list = [{
     {
         'name': 'Screwdriver',
         'ingredients': {
-            'vodka': 40,
+            'vodka': 50,
             'oj': 100
         },
-        'prep': 'Kasper mener: Den eneste',
-        'prep1':  'skruetrækker, jeg bør komme',
-        'prep2': 'i nærheden af. Men den er',
-        'prep3': 'kedelig! 3 ud af 10 stjerner',
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     },
     {
         'name': 'Cuba Libre',
         'ingredients': {
             'whiteRum': 50,
             'cola': 120,
-            'lej': 10
+            'lij': 10
         },
         'prep': 'Kasper mener: Navnet får den til at lyde',
         'prep1':  'meget mere fancy end den er.',
@@ -282,12 +280,12 @@ drink_list = [{
         'ingredients': {
             'tequila': 35.0,
             'tripSec': 20,
-            'lej': 15.0
+            'lij': 15.0
         },
-        'prep': 'Kasper mener: 100 gange bedre',
-        'prep1':  'end pizzaen. Simpel og lækker. ',
-        'prep2': 'Hvem minder det dig om?',
-        'prep3': 'Antal stjerner afhænger af dit svar',
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     },
     {
         'name': 'French 75',
@@ -318,13 +316,14 @@ drink_list = [{
     {
         'name': 'Pina Colada',
         'ingredients': {
-            'whiteRum': 45,
-            'pj': 135
+            'whiteRum': 30,
+            'pj': 90,
+            'coconutMilk': 30
         },
-        'prep': 'Kasper mener: Den her drikkes',
-        'prep1':  'bedst på en Hawaii-strand.',
-        'prep2': 'TILFØJ: EN STOR OG EN LILLE',
-        'prep3': 'KOP KOKOSMÆLK',
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     },
     {
         'name': 'Aviation',
@@ -367,30 +366,16 @@ drink_list = [{
             'oj': 90,
             'grenadine': 15.0
         },
-        'prep': 'Kasper mener: En sikker',
-        'prep1':  'vinder hos de ældre.',
-        'prep2': 'Måske derfor, jeg synes om den.',
-        'prep3': '6 ud af 10 stjerner.',
-    },
-    {
-        'name': 'Teddy Bear',
-        'ingredients': {
-            'vodka': 30,
-            'tripSec': 30,
-            'lej': 30,
-            'oj': 30
-        },
-        'prep': '',
-        'prep1': '',
-        'prep2': '',
-        'prep3': '',
-        'specials': ['1 dash Angostura Bitters']
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
     },
     {
         'name': 'Daiquiri',
         'ingredients': {
             'whiteRum': 45.0,
-            'lej': 25.0,
+            'lij': 25.0,
             'grenadine': 15.0
         },
         'prep': 'Kasper mener: Mindre tøset end',
@@ -401,97 +386,13 @@ drink_list = [{
     {
         'name': 'Gimlet',
         'ingredients': {
-            'gin': 60.0,
-            'lej': 15.0,
-            'sugar': 15.0,
-         },
+            'gin': 45.0,
+            'lij': 25.0
+        },
         'prep': 'Kasper mener: Minder lidt om det,',
-        'prep1': 'en privatdetektiv drikker i film.',
-        'prep2': 'Det ville jeg nok være god til.',
-        'prep3': '',
-    },
-{
-        'name': 'Monkey Gland',
-        'ingredients': {
-            'gin': 45.0,
-            'grenadine': 10.0,
-            'oj': 30.0,
-
-        },
-        'prep': 'Kasper mener: Ved du,',
-        'prep1': 'hvad gland betyder?',
-        'prep2': 'Det er på eget ansvar. ',
-        'prep3': 'Held og lykke',
-    },
- {
-        'name': 'Tooty Fruity',
-        'ingredients': {
-            'vodka': 30.0,
-            'tripSec': 30.0,
-            'grenadine': 15.0,
-            'pj': 30.0,
-            'oj': 30.0,
-        },
-         'prep': '',
-        'prep1': '',
-        'prep2': '',
-        'prep3': '',
-    },
-{
-        'name': 'Test pumpe 8',
-        'ingredients': {
-            'oj': 100.0,
-        },
-         'prep': '100 ml',
-        'prep1': 'Stor pumpe',
-        'prep2': '',
-        'prep3': '',
-    },
-{
-        'name': 'Test pumpe 1',
-        'ingredients': {
-            'sugar': 100.0,
-        },
-         'prep': '100 ml',
-        'prep1': 'lille pumpe',
-        'prep2': '',
-        'prep3': '',
-    },
-
-{
-        'name': 'Kamikaze',
-        'ingredients': {
-            'vodka': 45.0,
-            'lej': 30.0,
-            'tripSec': 30.0,
-        },
-        'prep': 'Kasper mener: Voldsomt navn,',
-        'prep1': 'men du behøver ikke',
-        'prep2': 'gå kamikaze når du',
-        'prep3': 'drikker den. En 7er',
-    },
-{
-        'name': 'Horney Bull',
-        'ingredients': {
-            'tequila': 45.0,
-            'oj': 150.0
-        },
-        'prep': 'Kasper mener: En drink ,',
-        'prep1': 'til de kedelige typer. .',
-        'prep2': 'Sådan nogle kender jeg ',
-        'prep3': 'åbenbart også. 2 stjerner',
-    },
-    {
-        'name': 'John Collins',
-        'ingredients': {
-            'gin': 45.0,
-            'lej': 30.0,
-            'soda': 60.0
-        },
-        'prep': 'Kasper mener: Hvem er ham John',
-        'prep1': 'Collins? Aner det ikke, men du',
-        'prep2': 'møder ham snart.',
-        'prep3': '',
+        'prep1':  'jordbærudgaven. Både for kvinder og',
+        'prep2': 'tøsedrenge. 6 ud af 10 stjerner.',
+        'prep3': 'Skål!',
     },
     {
         'name': 'Rusty Nail',
@@ -700,8 +601,16 @@ drink_list = [{
         'prep1':  'ÆØÅ Detter er prep1',
         'prep2': 'ÆØÅ Dette er prep2',
         'prep3': 'ÆØÅ Dette er prep3',
-    } 
-     ]
+    } , {
+        'name': 'Saftevand',
+        'ingredients': {
+           'tripSec': 50
+        },
+        'prep': 'ÆØÅ dette er prep',
+        'prep1':  'ÆØÅ Detter er prep1',
+        'prep2': 'ÆØÅ Dette er prep2',
+        'prep3': 'ÆØÅ Dette er prep3',
+    } ]
     
     #, "pump_7": {"value": "tripSec", "name": "Pump 7", "pin": 10}, "pump_8": {"value": "oj", "name": "Pump 8", "pin": 9}
 
@@ -849,10 +758,6 @@ drink_options = [
       {
         "name": "Tom",
         "value": "Tom"
-    },
-{
-        "name": "Sugar",
-        "value": "sugar"
     },
 ]
 
